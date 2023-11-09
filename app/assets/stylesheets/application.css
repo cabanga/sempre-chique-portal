@@ -18,3 +18,8 @@
 .product-title {
     text-align: center;
 }
+
+h-colect-title v3 {
+    font-size: 30px;
+    -webkit-text-stroke: 1px white;
+}
