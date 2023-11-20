@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
+    resources :services
     root 'site#index'
 
-    get '/services',    to: 'site#services',    as: 'services'
+    #get '/services',    to: 'site#services',    as: 'services'
     get '/about',       to: 'site#about',       as: 'about'
     get '/contact',     to: 'site#contact',     as: 'contact'
 
