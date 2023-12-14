@@ -23,3 +23,9 @@ h-colect-title v3 {
     font-size: 30px;
     -webkit-text-stroke: 1px white;
 }
+
+div.card-kamba-bg {
+    background: linear-gradient(90deg, #c99e7e 0%, #ad614e 76%);
+    padding: 15px;
+    border-radius: 5px;
+}
