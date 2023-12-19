@@ -1,0 +1,22 @@
+<div class="featured-product">
+    <div class="container">
+        <h3 class="vow-title">NOSSOS SERVIÇOS</h3>
+
+        <div class="row">
+
+            <% @services.each do |service| %>
+                <div class="col-xs-6 col-sm-4 col-md-2">
+                    <div class="product-img v2" style="padding: 20px;">
+                        <a class="hover-images" href="<%= service_detail_path(service) %>">
+                            <%= image_tag("site/icons/#{service.img_link}", class: "img-reponsive img-thumbnail") %>
+                        </a>
+                    </div>
+                    <div class="product-info v2">
+                        <h4 class="product-title"><a href="<%= service_detail_path(service) %>"> <%= service.name %> </a></h4>
+                    </div>
+                </div>
+            <% end %>
+
+        </div>
+    </div>
+</div>

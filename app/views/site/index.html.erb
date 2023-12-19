@@ -139,50 +139,18 @@
 
         <div class="row">
 
-            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 product-item">
-                <div class="product-img v2">
-                    <a class="hover-images" href="https://noivas.sempre-chique.com">
-                        <%= image_tag("site/services/vestido.png", class: "img-reponsive img-thumbnail") %>
-                    </a>
+            <% @services.each do |service| %>
+                <div class="col-xs-6 col-sm-4 col-md-2">
+                    <div class="product-img v2" style="padding: 20px;">
+                        <a class="hover-images" href="<%= service_detail_path(service) %>">
+                            <%= image_tag("site/icons/#{service.img_link}", class: "img-reponsive img-thumbnail") %>
+                        </a>
+                    </div>
+                    <div class="product-info v2">
+                        <h4 class="product-title"><a href="<%= service_detail_path(service) %>"> <%= service.name %> </a></h4>
+                    </div>
                 </div>
-                <div class="product-info v2">
-                    <h3 class="product-title"><a href="https://noivas.sempre-chique.com/">LOJA DE NOIVAS</a></h3>
-                </div>
-            </div>
-
-
-            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 product-item">
-                <div class="product-img v2">
-                    <a class="hover-images" href="#">
-                        <%= image_tag("site/services/plan_event.png", class: "img-reponsive img-thumbnail") %>
-                    </a>
-                </div>
-                <div class="product-info v2">
-                    <h3 class="product-title"><a href="#">PLANEAMENTO & ORGANIZAÇÃO DE EVENTOS</a></h3>
-                </div>
-            </div>
-
-            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 product-item">
-                <div class="product-img v2">
-                    <a class="hover-images" href="#">
-                        <%= image_tag("site/services/decoracao1.png", class: "img-reponsive img-thumbnail") %>
-                    </a>
-                </div>
-                <div class="product-info v2">
-                    <h3 class="product-title"><a href="#">DECORAÇÃO</a></h3>
-                </div>
-            </div>
-
-            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 product-item">
-                <div class="product-img v2">
-                    <a class="hover-images" href="#">
-                        <%= image_tag("site/services/buffet.png", class: "img-reponsive img-thumbnail") %>
-                    </a>
-                </div>
-                <div class="product-info v2">
-                    <h3 class="product-title"><a href="#">BUFFET</a></h3>
-                </div>
-            </div>
+            <% end %>
 
         </div>
     </div>

@@ -12262,7 +12262,6 @@ body {
 
 .author-quote p:before {
   content: "";
-  background: url(../img/others/other-quote2.png) no-repeat center;
   margin-left: auto;
   margin-right: auto;
   left: 0;

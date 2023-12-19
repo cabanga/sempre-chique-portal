@@ -4,9 +4,13 @@ Rails.application.routes.draw do
     root 'site#index'
 
     #get '/services',    to: 'site#services',    as: 'services'
-    get '/about',       to: 'site#about',       as: 'about'
-    get '/contact',     to: 'site#contact',     as: 'contact'
-    get '/dashboard',           to: 'dashboard#index',        as: :dashboard
+    get '/about',                       to: 'site#about',           as: 'about'
+    get '/contact',                     to: 'site#contact',         as: 'contact'
+    get '/dashboard',                   to: 'dashboard#index',      as: :dashboard
+
+    get '/nossos-services',             to: 'site#all_services',    as: 'all_services'
+    get '/nossos-services/details/:id', to: 'site#service_detail',  as: 'service_detail'
+
 
     # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

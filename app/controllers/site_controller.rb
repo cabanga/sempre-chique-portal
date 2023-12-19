@@ -2,6 +2,7 @@ class SiteController < ApplicationController
     layout 'site'
 
     def index
+        @services = Service.all
     end
 
     def services
@@ -13,6 +14,14 @@ class SiteController < ApplicationController
     def contact
     end
 
+
+    def all_services
+        @services = Service.all
+    end
+    
+    def service_detail
+        @service = Service.friendly.find(params[:id])
+    end
 
     
 
