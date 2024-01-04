@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  devise_for :users
-    resources :services
     root 'site#index'
+
+    devise_for :users
+
+    resources :services
 
     #get '/services',    to: 'site#services',    as: 'services'
     get '/about',                       to: 'site#about',           as: 'about'
